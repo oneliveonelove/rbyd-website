@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return By Death - Bleach vs Naruto Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: rgba(20, 22, 30, 0.7);
+            --primary: #ff3366;
+            --secondary: #33ccff;
+            --text-color: #f5f6fa;
+            --text-muted: #8f92a1;
+            --glow-red: rgba(255, 51, 102, 0.4);
+            --glow-blue: rgba(51, 204, 255, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 51, 102, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(51, 204, 255, 0.12) 0%, transparent 40%);
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero {
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            background: linear-gradient(180deg, #ffffff 0%, #a2a6b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, var(--primary) 30%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 38px;
+            border-radius: 14px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .btn-android {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 0 30px var(--glow-red);
+        }
+
+        .btn-android:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 45px var(--primary);
+        }
+
+        .btn-ios {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-ios:hover {
+            transform: translateY(-3px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary);
+            box-shadow: 0 0 30px var(--glow-blue);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 35px 25px;
+            backdrop-filter: blur(16px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-align: left;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 80px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1rem;
+            }
+            .btn {
+                width: 100%;
+                padding: 16px 20px;
+            }
+            .cta-container {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RETURN BY DEATH</div>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>BLEACH vs NARUTO <span>Mobile</span></h1>
+            <p class="tagline">Trải nghiệm tựa game đối kháng huyền thoại với cấu hình tùy chỉnh, đồ họa chất lượng cao và cơ chế P2P Netplay đồng bộ hoàn toàn mới dành riêng cho thiết bị di động của bạn.</p>
+            <div class="cta-container">
+                <a href="/android" class="btn btn-android">Tải cho Android (APK)</a>
+                <a href="/ios-sideload" class="btn btn-ios">Tải cho iOS (IPA)</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">P2P Rollback Netcode</h3>
+                <p class="feature-desc">Giảm độ trễ đầu vào tối đa xuống còn 4 frames, giúp các trận đấu đối kháng online diễn ra mượt mà và không còn hiện tượng slow-motion.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎨</span>
+                <h3 class="feature-title">Giao diện Tùy chỉnh</h3>
+                <p class="feature-desc">Màn hình chọn nhân vật được thiết kế lại với ảnh nền độc quyền sắc nét, căn chỉnh lại các nút điều hướng để thao tác chạm tối ưu nhất.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <h3 class="feature-title">Bảo mật Tối đa</h3>
+                <p class="feature-desc">Đóng gói bằng công nghệ Secure Bootstrap mã hóa XOR phân mảnh và Harman SDK swfencrypt ngăn chặn tối đa việc can thiệp trái phép.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Return By Death. All rights reserved. Powered by GitHub Pages.</p>
+        </footer>
+    </main>
+</body>
+</html>
